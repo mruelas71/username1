@@ -1,13 +1,13 @@
 # README for Username Validation Script
 
 ## Author Information
-- **Name:** [Your Full Name]
-- **Course:** [Course Number and Name]
+- **Name:** Moises Ruelas
+- **Course:** CPSC 298
 - **Assignment:** Username Validation
-- **Date:** [Date of Completion]
+- **Date:** 10/21/2025
 
 ## Program Description
-[Write 2-3 sentences in your own words describing what this script does and its purpose. Explain the problem it solves and how it works at a high level.]
+[This program asks the user to enter a username. Once the user inputs something the program will then see what the user input is and validate if it reaches the right requirements or not.]
 
 ## Username Requirements
 This script validates usernames according to the following rules:
@@ -28,6 +28,7 @@ To test with the provided input file:
 
 ## How the Script Works
 [Explain in 3-5 sentences how your script validates usernames. Include information about:]
+The script uses a `while` loop to go through each username one by one and check if it’s valid. It uses the `grep` command with the `-E` option for extended regular expressions to match usernames with the right pattern, while the `-v` flag helps find ones that don’t fit. The part `> /dev/null 2>&1` just hides any extra messages or errors so the results look clean.
 - The use of the `while` loop
 - The `grep` command with extended regular expressions
 - The meaning of the `-E` and `-v` flags
@@ -46,8 +47,11 @@ This pattern ensures that:
 ## Testing Results
 [Describe your testing process and results. Include:]
 - Example valid usernames you tested (at least two)
+Usernames that worked: jsmith_2023, dev_user, test123
 - Example invalid usernames and why they fail (at least two)
+Usernames that did not work: a, test-user, jsmith!
 - How you used the username-input file to test
+The first two passed the test because they had the required lowercase letters while the other usernames didn't.
 
 ## Challenges and Solutions
 [Optional: Describe any challenges you encountered while creating this script and how you solved them. This could include debugging issues, understanding regular expressions, or Git workflow problems.]
