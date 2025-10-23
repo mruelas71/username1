@@ -1,3 +1,8 @@
+#!/bin/bash
+# numbers.sh
+# Moises Ruelas
+# CPSC 298
+
 file=${1:-username-input}
 
 if [ ! -f "$file" ]; then
@@ -5,7 +10,7 @@ if [ ! -f "$file" ]; then
   exit 1
 fi
 
-while read username; do
+while read -r username; do
   if [[ $username =~ ^[a-zA-Z][a-zA-Z0-9_]{2,15}$ ]]; then
     echo "$username → Valid username"
   else
